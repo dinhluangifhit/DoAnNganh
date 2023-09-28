@@ -2,8 +2,24 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
- /*** Navbar ***/
-.sticky-top {
+  
+  #spinner{
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+    .show {
+      transition: opacity .5s ease-out, visibility 0s linear 0s;
+      visibility: visible;
+      opacity: 1;
+    }
+    .spinner-border{
+      width: 3rem; height: 3rem;
+    }
+  }
+
+  .sticky-top {
     top: -100px;
     transition: .5s;
 }
@@ -67,6 +83,8 @@ body {
         visibility: visible;
         transition: .5s;
         opacity: 1;
+        background-color: #198754;
+        
     }
 }
 
@@ -74,26 +92,24 @@ body {
 
 
 
-
-
-  // .topnav {
+  .topnav {
    
 
-  //   a {
-  //   float: left;
-  //   color: #f2f2f2;
-  //   text-align: center;
-  //   padding: 14px 16px;
-  //   text-decoration: none;
-  //   font-size: 17px;
-  // }
-  //   a:hover {
-  //     background-color: #ddd;
+    a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+    a:hover {
+      background-color: #ddd;
   
-  // }
-  //   a.active {
+  }
+    a.active {
 
-  //     color: white;
-  //   }
-  // }
+      color: white;
+    }
+  }
   
